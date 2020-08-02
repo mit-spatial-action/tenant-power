@@ -1,0 +1,37 @@
+{
+  "name": "landlords",
+  "version": "0.0.1",
+  "description": "Project of the mapping landlords working group for the mutual aid society of Medford and Somerville",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build --public-url . index.html"
+  },
+  "keywords": [
+    "map",
+    "landlords",
+    "mutual",
+    "aid",
+    "assessing",
+    "property",
+    "tenants",
+    "organizing"
+  ],
+  "author": "Eric Robsky Huntley",
+  "license": "MIT",
+  "dependencies": {
+    "@deck.gl/core": "^8.2.0",
+    "@deck.gl/layers": "^8.2.0",
+    "deck.gl": "^8.2.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "mapbox": "^1.0.0-beta10",
+    "mapbox-gl": "^1.11.0",
+    "pg": "^8.2.1",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}

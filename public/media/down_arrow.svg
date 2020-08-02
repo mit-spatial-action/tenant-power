@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 38 48"
+   id="svg10"
+   sodipodi:docname="down_arrow.svg"
+   width="38"
+   height="48"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+  <metadata
+     id="metadata16">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs14" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1209"
+     inkscape:window-height="606"
+     id="namedview12"
+     showgrid="false"
+     inkscape:zoom="3.2551724"
+     inkscape:cx="19"
+     inkscape:cy="16.75"
+     inkscape:window-x="554"
+     inkscape:window-y="87"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g4" />
+  <g
+     transform="translate(-10,-999.3622)"
+     id="g4">
+    <path
+       style="color:#000000;text-indent:0;text-transform:none;direction:ltr;baseline-shift:baseline;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;stroke:none;enable-background:accumulate"
+       d="m 29,1047.3622 c 6.375,-6.375 12.625,-12.625 19,-19 l -4.125,-4.2188 -11.875,11.875 v -36.6562 h -6 v 36.6562 l -11.875,-11.875 -4.125,4.2188 c 6.375,6.375 12.625,12.625 19,19 z"
+       marker="none"
+       visibility="visible"
+       display="inline"
+       overflow="visible"
+       id="path2"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

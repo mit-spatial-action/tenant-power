@@ -1,0 +1,272 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+  font-family: sans-serif;
+  margin: auto;
+}
+
+
+.container { 
+    margin: 1rem;
+    /* width: 20%; */
+    /* padding: 0; */
+}
+
+#map {
+  position: absolute; 
+  top: 0; 
+  bottom: 0; 
+  width: 100%; 
+  z-index: 0;
+}
+
+.card {
+  border-radius: 0;
+  z-index: 20;
+  padding: 1rem;
+}
+
+.active .address{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.active.address {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.active.address::after {
+  content: "←";
+}
+
+#closest {
+  color: red;
+  margin-top: 6rem;
+  position: fixed;
+  z-index: 20;
+  max-width: 35vw;
+}
+
+#closest .address {
+  background-color: rgba(255,255,255, 0.9);
+}
+
+#closest .address:hover {
+  background-color: rgba(255,255,255, 1);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#closest .address:hover::after {
+  background-color: rgba(255,255,255, 1);
+  cursor: pointer;
+  text-decoration: underline;
+  content: "←";
+}
+
+/* #closest .card:hover .address {
+} */
+
+#closest .address {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 700;
+}
+
+#closest .city {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 300;
+}
+
+.button {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  color: white;
+  background-color: red;
+}
+
+.btn-toolbar button {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  color: white;
+  background-color: red !important;
+  border-radius: 0 !important;
+  border-style: none !important;
+}
+
+.button.active {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.btn-toolbar button.active {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.btn-toolbar button a:link {
+  color: white;
+}
+
+.btn-toolbar button a:visited {
+  color: white;
+}
+
+
+.btn-toolbar button a:hover {
+  color: white;
+  font-weight: 500;
+}
+
+.btn-toolbar button a:active {
+  color: white;
+}
+
+#ll-props {
+  border-left-style: solid;
+  border-width: 1px;
+  border-color: white;
+  position: absolute;
+  overflow: auto;
+  top: 45vh;
+  max-height:50vh;
+  max-width: 35vw;
+}
+
+#ll-props > .card {
+  background-color: transparent;
+  border-style: none;
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#nearby {
+  border-left-style: solid;
+  border-width: 1px;
+  border-color: white;
+  top: 45vh;
+  position: absolute;
+  overflow: auto;
+  max-height:50vh;
+  max-width: 35vw;
+}
+
+#nearby > .card {
+  background-color: transparent;
+  border-style: none;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 1rem;
+}
+
+.property > .card-title-block {
+  background-color: white;
+  padding: 1rem;
+  color: red;
+}
+
+#nearby .card-title-block {
+  background-color: white;
+  /* padding: 1rem 1rem 0 1rem; */
+  /* margin: 1rem 1rem 0 1rem; */
+  color: red;
+}
+
+.property > .body {
+  padding: 1rem;
+  color: white;
+  background-color: rgba(255,0,0,0.3)
+}
+
+
+#ll-info {
+  z-index: 20;
+  position: fixed;
+  color: red;
+  margin-right: 1rem;
+}
+
+#ll-info .ll-name {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 700;
+}
+
+#ll-info .ll-body {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 400;
+}
+
+.address {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 700;
+}
+
+#ll-props .city {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 300;
+}
+
+#ll-props .body {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 400;
+}
+
+.data {
+  font-family: 'Overpass Mono', monospace;
+  font-weight: 300;
+}
+
+.geocoder {
+  z-index: 1;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+}
+
+.mapboxgl-ctrl-geocoder {
+  font-family: 'Overpass', sans-serif;
+  width: 100%;
+  border-radius: 0;
+}
+
+.mapboxgl-ctrl-geocoder--input {
+  color: red;
+}
+
+.mapboxgl-ctrl-geocoder--suggestion {
+  color: red;
+}
+
+.suggestions-wrapper {
+  z-index: 3;
+}
+
+#left-sidebar {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 1rem;
+  padding-left: 1px;
+  width: 30rem;
+}
+
+#right-sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  width: 35vw;
+  z-index: 20;
+}
+
+#here:hover {
+  cursor: pointer;
+  color: red;
+}
