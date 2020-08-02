@@ -3,3 +3,5 @@ cert/
 node_modules/
 creds.js
 logfile
+public/js/env.js
+.env
