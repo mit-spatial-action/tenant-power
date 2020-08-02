@@ -1,0 +1,5 @@
+.cache/
+cert/
+node_modules/
+creds.js
+logfile
