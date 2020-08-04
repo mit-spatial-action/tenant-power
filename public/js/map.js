@@ -1,5 +1,6 @@
 const map = new mapboxgl.Map({
     container: 'map',
+    accessToken: mapboxgl.accessToken,
     style: 'mapbox://styles/ericrobskyhuntley/ckd62zeup16we1hpia9fcacdw?optimize=true', // stylesheet location
     center: [-71.057083, 42.361145], // starting position [lng, lat]
     zoom: 13 // starting zoom
@@ -75,6 +76,10 @@ listResults = (features) => {
     // while (property.firstChild) {
     //     property.removeChild(property.firstChild);
     // }
+    let ls = document.getElementById('left-sidebar');
+    ls.style.display = 'block';
+    let rs = document.getElementById('right-sidebar');
+    rs.style.display = 'none';
     let closest = features[0];
     let props = closest.properties;
     let closestProp = document.getElementsByClassName('closest-card');
@@ -231,8 +236,10 @@ listResults = (features) => {
 listProperties = (cluster) => {
     let first = cluster[0];
     let props = first.properties;
-    let llClust = document.getElementById('ll-clust');
-    llClust.style.visibility = 'visible';
+    let ls = document.getElementById('left-sidebar');
+    ls.style.display = 'none';
+    let rs = document.getElementById('right-sidebar');
+    rs.style.display = 'block';
     let llProps = document.getElementById('ll-props');
     let llInfo = document.getElementById('ll-info');
     let closest = document.getElementById('closest');
@@ -511,7 +518,6 @@ addPoints = async (url) => {
             }
         });
         map.on('click', 'prop-circle', function (e) {
-            let coords = e.features[0].geometry.coordinates.slice();
             let clickedProperty = e.features[0].properties.id;
             let elmnt = document.getElementById('property-' + clickedProperty);
             elmnt.scrollIntoView({
@@ -560,6 +566,10 @@ map.on('load', () => {
         }
     });
     geocoder.on('result', function (e) {
+        let ls = document.getElementById('left-sidebar');
+        ls.style.display = 'block';
+        let rs = document.getElementById('right-sidebar');
+        rs.style.display = 'none';
         const geocodelngLat = e.result.geometry.coordinates;
         const qUrl = `${xyUrl}/${geocodelngLat[0]}/${geocodelngLat[1]}/1`;
         addPoints(qUrl);
@@ -580,8 +590,8 @@ map.on('load', () => {
         let llInfo = document.getElementById('ll-info');
         let closest = document.getElementById('closest');
         let nearby = document.getElementById('nearby');
-        let llClust = document.getElementById('ll-clust');
-        llClust.style.visibility = 'hidden';
+        let properties = document.getElementById('properties');
+        properties.style.display = 'none';
         while (nearby.firstChild) {
             nearby.removeChild(nearby.firstChild);
         }
@@ -598,8 +608,10 @@ map.on('load', () => {
     geocoder.on('results', function(e) {
         let closest = document.getElementById('closest');
         let nearby = document.getElementById('nearby');
-        let llClust = document.getElementById('ll-clust');
-        llClust.style.visibility = 'hidden';
+        let ls = document.getElementById('left-sidebar');
+        ls.style.display = 'none';
+        let rs = document.getElementById('right-sidebar');
+        rs.style.display = 'none';
         while (nearby.firstChild) {
             nearby.removeChild(nearby.firstChild);
         }
@@ -633,8 +645,8 @@ map.on('load', () => {
             let llInfo = document.getElementById('ll-info');
             let closest = document.getElementById('closest');
             let nearby = document.getElementById('nearby');
-            let llClust = document.getElementById('ll-clust');
-            llClust.style.visibility = 'hidden';
+            let properties = document.getElementById('properties');
+            properties.style.display = 'block';
             while (nearby.firstChild) {
                 nearby.removeChild(nearby.firstChild);
             }
