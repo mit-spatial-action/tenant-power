@@ -270,7 +270,7 @@ html, body {
 }
 
 #right-sidebar {
-  margin-top: 5rem;
+  margin-top: 3rem;
   z-index: 20;
   pointer-events: none;
   display:none;
