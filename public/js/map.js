@@ -216,16 +216,24 @@ listResults = (features) => {
                 close.removeChild(close.firstChild);
             }
         })
-        let moreButton = closestDiv.appendChild(document.createElement('div'));
-        moreButton.className = 'button more-results';
-        moreButton.innerHTML = 'See Nearby Properties';
-        moreButton.addEventListener('mouseover', function () {
+        let buttonRow = closestDiv.appendChild(document.createElement('div'));
+        buttonRow.className = 'btn-toolbar';
+        buttonRow.role = 'toolbar';
+        let buttonGroup = buttonRow.appendChild(document.createElement('div'));
+        buttonGroup.className = 'btn-group mr-2';
+        buttonGroup.role = 'group';
+        let button = buttonGroup.appendChild(document.createElement('button'));
+        button.type = 'button';
+        button.className = 'btn btn-secondary';
+        let buttonLink = button.appendChild(document.createElement('a'));
+        buttonLink.innerHTML = '<u class="data">See Nearby Properties→</u>';
+        button.addEventListener('mouseover', function () {
             this.classList.add('active');
         })
-        moreButton.addEventListener('mouseleave', function () {
+        button.addEventListener('mouseleave', function () {
             this.classList.remove('active');
         })
-        moreButton.addEventListener('click', function (e) {
+        button.addEventListener('click', function () {
             this.style.display = 'none';
             const qUrl = `${xyUrl}/${props.lon}/${props.lat}/100`;
             addPoints(qUrl);
