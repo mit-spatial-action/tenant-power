@@ -413,7 +413,15 @@ addPoints = async (url) => {
             'source': 'nearby',
             'minzoom': 14,
             'paint': {
-                'fill-opacity': 1,
+                'fill-opacity': [
+                    'interpolate',
+                    ['linear'],
+                    ['zoom'],
+                    14,
+                    0,
+                    18,
+                    1
+                ],
                 'fill-color': 'red'
             }
         });
@@ -529,7 +537,7 @@ addPoints = async (url) => {
                 speed: 0.9,
             })
         });
-        map.fitBounds(bbox, { padding: 300 });
+        map.fitBounds(bbox, { maxZoom: 17 });
     }
 }
 

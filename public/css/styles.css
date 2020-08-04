@@ -263,14 +263,14 @@ html, body {
 }
 
 #left-sidebar {
-  margin-top: 3rem;
+  margin-top: 2rem;
   z-index: 20;
   pointer-events: none;
   display: none;
 }
 
 #right-sidebar {
-  margin-top: 3rem;
+  margin-top: 2rem;
   z-index: 20;
   pointer-events: none;
   display:none;
