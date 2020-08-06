@@ -74,14 +74,25 @@ html, body {
 /* #closest .card:hover .address {
 } */
 
+.modal {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 500;
+}
+
 #closest .address {
   font-family: 'Overpass', sans-serif;
   font-weight: 700;
 }
 
+.modal-title {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 700;
+  color:red;
+}
+
 #closest .city {
   font-family: 'Overpass', sans-serif;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .button {
@@ -89,6 +100,16 @@ html, body {
   padding: 0.5rem;
   color: white;
   background-color: red;
+}
+
+.btn.btn-secondary {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  color: white;
+  background-color: rgba(255,0,0,0.7);
+  border-radius: 0 !important;
+  border-style: none !important;
+  width:100%
 }
 
 .btn-toolbar button {
@@ -125,6 +146,52 @@ html, body {
 }
 
 .btn-toolbar button a:active {
+  color: white;
+}
+
+.modal-content {
+  background-color: transparent;
+}
+
+.modal-body {
+  color: white;
+  background-color: rgba(255,0,0,0.7);
+  border-radius: 0;
+  border-width: 0;
+}
+
+.modal-header {
+  background-color: white;
+  border-radius: 0;
+  border-width: 0;
+}
+
+.modal-footer {
+  border-radius: 0;
+  border-width: 0;
+}
+
+.modal-content {
+  border-radius: 0;
+  border-width: 0;
+
+}
+
+.modal a:link {
+  color: white;
+}
+
+.modal a:visited {
+  color: white;
+}
+
+
+.modal a:hover {
+  color: white;
+  font-weight: 500;
+}
+
+.modal a:active {
   color: white;
 }
 
@@ -193,7 +260,7 @@ html, body {
 .property > .body {
   padding: 1rem;
   color: white;
-  background-color: rgba(255,0,0,0.3)
+  background-color: rgba(255,0,0,0.7)
 }
 
 
@@ -220,7 +287,7 @@ html, body {
 
 #ll-props .city {
   font-family: 'Overpass', sans-serif;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 #ll-props .body {
@@ -230,7 +297,7 @@ html, body {
 
 .data {
   font-family: 'Overpass Mono', monospace;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 #geocoder {

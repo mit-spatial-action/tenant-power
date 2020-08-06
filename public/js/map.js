@@ -1,3 +1,5 @@
+$('#disclaimer').modal('show');
+
 const map = new mapboxgl.Map({
     container: 'map',
     accessToken: mapboxgl.accessToken,
