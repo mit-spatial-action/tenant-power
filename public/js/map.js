@@ -5,7 +5,8 @@ const map = new mapboxgl.Map({
     accessToken: mapboxgl.accessToken,
     style: 'mapbox://styles/ericrobskyhuntley/ckd62zeup16we1hpia9fcacdw?optimize=true', // stylesheet location
     center: [-71.057083, 42.361145], // starting position [lng, lat]
-    zoom: 13 // starting zoom
+    zoom: 13, // starting zoom,
+    customAttribution: '<u class="data"><a href="https://mutualaidmamas.com/" target="_blank">MAMAS Housing Justice</a></u>, <u class="data"><a href="https://geo-graphe.org"  target="_blank">Graphe</a></u>'
 });
 
 const geocoder = new MapboxGeocoder({
