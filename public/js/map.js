@@ -318,6 +318,23 @@ listProperties = (cluster) => {
     buttonJSON.addEventListener('mouseleave', function () {
         this.classList.remove('active');
     })
+    let buttonInfoGroup = buttonRow.appendChild(document.createElement('div'));
+    buttonInfoGroup.className = 'btn-group mr-2';
+    buttonInfoGroup.role = 'group';
+    let buttonInfo = buttonInfoGroup.appendChild(document.createElement('button'));
+    buttonInfo.type = 'button';
+    buttonInfo.className = 'btn btn-secondary';
+    let buttonInfoLink = buttonInfo.appendChild(document.createElement('a'));
+    buttonInfoLink.innerHTML = '<u class="data">Tell Me More→</u>';
+    buttonInfo.addEventListener('mouseover', function () {
+        this.classList.add('active');
+    })
+    buttonInfo.addEventListener('mouseleave', function () {
+        this.classList.remove('active');
+    })
+    buttonInfo.addEventListener('click', function () {
+        $('#about').modal('show');
+    })
     cluster.forEach(function (prop) {
         let p = prop.properties;
         let listing = llProps.appendChild(document.createElement('div'));

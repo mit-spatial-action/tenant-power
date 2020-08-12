@@ -75,6 +75,60 @@
         </div>
       </div>
     </div>
+    <div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLongTitle">Tenant Power</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Tenant Power uses what is called 'supervised machine learning' to assess whether properties have the same owner; we use the owner's name,
+              co-owner's name, and owner's address to identify likely matches. Basically, this means that we used our judgement to decide
+              whether a few hundred property pairs were owned by the same entity; an algorithm then used our 'training' dataset to decide
+              which of the remaining 200,000+ properties were owned by the same entities.
+            </p>
+            <p>
+              This approach is powerful, but far from perfect. It means that we're reasonably good at identifying
+              shared owners when these fields are shared; it also means that we're liable to mis-identify duplicates where these fields
+              nearly match. It's also frequently the case that property owners use multiple business names to mask their activities. If
+              these do not share an address, we have no way of identifying them.
+            </p> 
+            <p>
+              We built the web application using <u class="data"><a href="https://www.mapbox.com/">Mapbox</a></u>, <u class="data"><a href="https://nodejs.org/en/">node.js</a></u>/<u class="data"><a href="https://expressjs.com/">Express</a></u>, 
+              and <u class="data"><a href="https://www.postgresql.org/">PostgreSQL</a></u>/<u class="data"><a href="https://postgis.net/">PostGIS</a></u>. All our code is available on Gitlab: the <u class="data"><a href="https://gitlab.com/ericrobskyhuntley/tenant-power">web application</a></u>, 
+              as well as the <u class="data"><a href="https://gitlab.com/ericrobskyhuntley/landlord-deduplication">deduplication process and data scrapers</a></u> (the latter is in R). Deduplication is facilitated by the <u class="data"><a href="https://github.com/dedupeio/dedupe">dedupe</a></u> Python library.
+            </p>
+            <p>
+              If you'd like to get involved (come one, come all!), send an email to Eric Robsky Huntley 
+              (<u class="data"><a href="mailto:ericrobskyhuntley@gmail.com">ericrobskyhuntley@gmail.com</a></u>).
+            </p>
+            <p>
+              Tenant Power uses city assessor's data from 
+              <u class="data"><a href="https://data.boston.gov/dataset/property-assessment">Boston</a></u>, 
+              <u class="data"><a href="https://data.cambridgema.gov/Assessing/Cambridge-Property-Database-FY16-FY20/eey2-rv59">Cambridge</a></u>, 
+              <u class="data"><a href="https://data.somervillema.gov/Finance/Assessor-s-Property-Database-FY14-FY19/ubdh-uik5">Somerville</a></u>, 
+              <u class="data"><a href="https://docs.digital.mass.gov/dataset/massgis-data-standardized-assessors-parcels/">MassGIS (Medford)</a></u>, and
+              <u class="data"><a href="https://www.mapsonline.net/brooklinema/#x=-7928411.358035,5204910.232188,-7915283.298429,5213910.692267">Brookline</a></u>.
+              Brookline has not filed new assessor's parcels with MassGIS since 2011 and do not make their parcel data transparently available. 
+              For this reason, we scraped current parcel data for Brookline from a map application made available by the city.
+            </p>
+            <p>
+              Tenant Power is a collaboration between the
+              <u class="data"><a href="https://mutualaidmamas.com/">Mutual Aid Medford and Somerville (MAMAS)</a></u> 
+              Housing Justice Working Group
+              and <u class="data"><a href="https://geo-graphe.org">Graphe: A Critical Geography Collective</a></u>.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close→</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="map"></div>
     <script src='../js/map.js'></script>
   </body>
