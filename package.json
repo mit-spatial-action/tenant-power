@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel public/views/index.html",
-    "build": "parcel build --public-url . index.html"
+    "build": "parcel build --public-url . index.html",
+    "migrate": "db-migrate up",
+    "create-migration": "db-migrate create"
   },
   "keywords": [
     "map",
@@ -33,6 +35,8 @@
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "db-migrate": "^0.11.11",
+    "db-migrate-pg": "^1.2.2",
     "parcel-bundler": "^1.12.4"
   }
 }
