@@ -21,8 +21,25 @@
   }
 }
 ```
-
-- Run `npm run migrate` to migrate the database.
-- Grab the sample data from (insert location here) and dump it into your development database with `psql -d landlords -f sample_data.sql` (if you're using your own Postgres installation you may need to change the arguments to connect to the right database).
+- Run `npm run migrate-dev` to migrate the database.
+- There is a coresponding command for migrating the production database, `npm run migrate-prod`. This requires that the `database.json` file be expanded to include a 'prod' object, like so:
+```json
+{
+  "dev": {
+    ...
+  },
+  "prod": {
+    "driver": "pg",
+    "user": "postgres",
+    "password": "postgres",
+    "host": "localhost",
+    "database": "landlords",
+    "port": "5432",
+    "ssl": false,
+    "schema": "public"
+  }
+}
+```
+- Grab the sample data from []() and dump it into your development database with `psql -h localhost -d landlords -f props.sql`. This sample data covers only the City of Somerville. If you're using your own Postgres installation you may need to change the arguments to connect to the right database.
 - Start the server: `node landlords.js`
 - Start a server for the frontend with `npm run start`
