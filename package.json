@@ -4,16 +4,13 @@
   "description": "Project of the mapping landlords working group for the mutual aid society of Medford and Somerville",
   "main": "index.js",
   "scripts": {
+    "backend": "nodemon landlords.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-<<<<<<< HEAD
-    "backend": "nodemon landlords.js"
-=======
     "start": "parcel public/views/index.html",
     "build": "parcel build --public-url . index.html",
     "migrate-dev": "db-migrate up -e dev",
     "migrate-prod": "db-migrate up -e prod",
     "create-migration": "db-migrate create"
->>>>>>> zacharygraziano/tenant-power-add-db-migrate
   },
   "keywords": [
     "map",
@@ -45,12 +42,8 @@
     "vue": "^2.6.11"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "nodemon": "^2.0.6",
-=======
     "db-migrate": "^0.11.11",
     "db-migrate-pg": "^1.2.2",
->>>>>>> zacharygraziano/tenant-power-add-db-migrate
     "parcel-bundler": "^1.12.4"
   }
 }
