@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html",
-    "build": "parcel build --public-url . index.html"
+    "backend": "nodemon landlords.js"
   },
   "keywords": [
     "map",
@@ -18,6 +17,11 @@
     "tenants",
     "organizing"
   ],
+  "nodemonConfig": {
+    "ignore": [
+      "public/*"
+    ]
+  },
   "author": "Eric Robsky Huntley",
   "license": "MIT",
   "dependencies": {
@@ -33,6 +37,7 @@
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "nodemon": "^2.0.6",
     "parcel-bundler": "^1.12.4"
   }
 }
