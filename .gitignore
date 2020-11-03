@@ -5,3 +5,5 @@ creds.js
 logfile
 public/js/env.js
 .env
+database.json
+props.sql

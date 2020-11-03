@@ -1,4 +1,4 @@
-const creds = require('./creds'),
+const creds = require('./database.json'),
     fs = require("fs"),
     path = require('path')
 
@@ -7,11 +7,11 @@ pg.defaults.ssl = true;
 const Pool = pg.Pool;
 
 const pool = new Pool({
-    user: creds.dbUser,
-    host: creds.dbHost,
-    database: creds.dbName,
-    password: creds.dbPass,
-    port: creds.dbPort,
+    user: creds.dev.user,
+    host: creds.dev.host,
+    database: creds.dev.database,
+    password: creds.dev.password,
+    port: creds.dev.port,
     ssl: {
         rejectUnauthorized: false
         // ca: fs.readFileSync(path.join(__dirname, 'cert/ca-certificate.crt')).toString()
